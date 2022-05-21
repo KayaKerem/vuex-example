@@ -13,8 +13,16 @@ const getters = {
         return `${state.message} from ${state.username}`
     }
 };
-const mutations = {};
-const actions = {};
+const mutations = {
+    setUsername(state,name){
+        state.username =name;
+    }
+};
+const actions = {
+    updateUsername({commit},name){
+        commit('setUsername',name);
+    }
+};
 
 export default new Vuex.Store({
     state,
