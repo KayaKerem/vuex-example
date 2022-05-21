@@ -8,7 +8,11 @@ const state = {
     message:'Merhaba'
 
 };
-const getters = {};
+const getters = {
+    welcomeMessage(state) {
+        return `${state.message} from ${state.username}`
+    }
+};
 const mutations = {};
 const actions = {};
 
